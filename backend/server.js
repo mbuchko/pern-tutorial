@@ -3,7 +3,6 @@ import helmet from "helmet"
 import morgan from "morgan"
 import cors from "cors"
 import dotenv from "dotenv"
-import pg from "pg"
 import path from "path"
 
 import productRoutes from "./routes/productRoutes.js"
