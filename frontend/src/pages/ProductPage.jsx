@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import { useProductStore } from "../store/useProductStore"
 import { useEffect } from "react"
-import { Button } from "@mui/material"
 import { ArrowLeftIcon, SaveIcon, Trash2Icon } from "lucide-react"
 
 function ProductPage() {
