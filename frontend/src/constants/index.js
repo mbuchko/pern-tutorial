@@ -25,3 +25,15 @@ export const THEMES = [
         colors: ["#f7f8fa", "#f1f2f4", "#e2e5e9"]
     }
 ]
+
+export const USERACTIONS = [
+    {
+        name: "Login"
+    },
+    {
+        name: "Logout"
+    },
+    {
+        name: "Register"
+    }
+]

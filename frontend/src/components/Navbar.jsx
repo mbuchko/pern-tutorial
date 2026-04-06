@@ -1,6 +1,7 @@
 import { Link, useResolvedPath } from "react-router-dom"
-import { ShoppingBagIcon, ShoppingCartIcon } from "lucide-react"
+import { LogInIcon, ShoppingBagIcon, ShoppingCartIcon, User2Icon } from "lucide-react"
 import ThemeSelector from "./ThemeSelector"
+import UserSelector from "./UserSelector.jsx"
 import { useProductStore } from "../store/useProductStore.js"
 
 function Navbar() {
@@ -29,7 +30,22 @@ function Navbar() {
                     
                     {/* RIGHT SECTION */}
                     <div className="flex items-center gap-4">
-                        <ThemeSelector />
+                        <ThemeSelector />                        
+                        {/* <UserSelector /> */}
+                        <div className="dropdown dropdown-end">
+                            {/* DROPDOWN TRIGGER */}
+                            <button tabindex={0} className="btn btn-ghost btn-circle">
+                                <User2Icon className="w-5 h-5"/>
+                            </button>
+                                <div tabIndex={0} className="dropdown-content mt-2 p-1 shadow-2xl bg-base-200
+                                backdrop-blur-lg rounded-2xl w-56 border-base-content/10">                            
+                                Login
+                                <LogInIcon />
+                            
+                            </div>
+                        </div>
+
+                        
                         {
                             isHomePage && (
                                 <div className="indicator">

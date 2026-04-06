@@ -47,6 +47,7 @@ async function initDB() {
         console.log("Database initialized successfully")
    } catch (error) {
         console.log("Error initDB:", error)
+        // await sql.
     }        
 }
 

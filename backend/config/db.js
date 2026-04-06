@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 dotenv.config()
 
- const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, PGPORT } = process.env
+const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, PGPORT } = process.env
 
 // const { Pool, Client } = pg
 
@@ -31,6 +31,8 @@ dotenv.config()
 //   port: 5433,
 //   database: 'postgres'
 // })
+
+
 
 export const sql = neon(
     `postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}?sslmode=require`

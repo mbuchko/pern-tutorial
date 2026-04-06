@@ -54,14 +54,14 @@ const SAMPLE_PRODUCTS = [
 async function seedDatabase() {
   try {
     // first, clear existing data
-    await sql`TRUNCATE TABLE products RESTART IDENTITY`;
+    await sql`TRUNCATE TABLE products RESTART IDENTITY`;    
 
     // insert all products
     for (const product of SAMPLE_PRODUCTS) {
       await sql`
         INSERT INTO products (name, price, image)
         VALUES (${product.name}, ${product.price}, ${product.image})
-      `;
+      `;      
     }
 
     console.log("Database seeded successfully");
